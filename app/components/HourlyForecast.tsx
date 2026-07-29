@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+
 type Hour = {
   time: string;
   temp_c: number;
@@ -8,7 +9,7 @@ type Hour = {
 
 export default function HourlyForecast({ hours }: { hours: Hour[] }) {
   return (
-    <div style={{
+    <div className="scroll-container" style={{
       background: "rgba(255,255,255,0.08)",
       backdropFilter: "blur(24px) saturate(160%)",
       WebkitBackdropFilter: "blur(24px) saturate(160%)",
@@ -19,6 +20,8 @@ export default function HourlyForecast({ hours }: { hours: Hour[] }) {
       width: "100%",
       marginBottom: "2rem",
       fontFamily: "'DM Sans', sans-serif",
+
+
     }}>
       <p style={{
         color: "rgba(255,255,255,0.4)",
@@ -31,7 +34,7 @@ export default function HourlyForecast({ hours }: { hours: Hour[] }) {
         Hourly
       </p>
 
-      <div style={{ display: "flex", gap: "0.5rem", overflowX: "auto", paddingBottom: "0.25rem" }}>
+      <div  className="hourly-scroll" style={{ display: "flex", gap: "0.5rem", overflowX: "scroll", paddingBottom: "0.25rem" }}>
         {hours.map((h, i) => (
           <div key={i} style={{
             minWidth: "4.5rem",

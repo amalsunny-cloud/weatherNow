@@ -49,6 +49,7 @@ export default function Home() {
   };
 
   const getLocationWeather = () => {
+  
     if (!navigator.geolocation) { setError("Geolocation not supported"); return; }
     setLoading(true);
     setError("");
@@ -76,7 +77,7 @@ export default function Home() {
       {/* Background Video */}
       <video key={backgroundVideo} autoPlay loop muted
         className="fixed top-0 left-0 w-full h-full object-cover -z-10 scale-105"
-        style={{ filter: "brightness(0.75) saturate(1.2)" }}
+        style={{ filter: "brightness(0.9) saturate(1.2)" }}
       >
         <source src={backgroundVideo} type="video/mp4" />
       </video>
@@ -86,7 +87,7 @@ export default function Home() {
         style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.35) 100%)" }}
       />
       <div className="fixed inset-0 -z-10"
-        style={{ backdropFilter: "blur(0px)" }}
+        style={{ backdropFilter: "blur(10px)" }}
       />
 
       {/* Main UI */}
@@ -183,7 +184,7 @@ export default function Home() {
               lineHeight: 1.1,
               textShadow: "0 2px 20px rgba(0,0,0,0.3)"
             }}>
-              Weather
+              WeatherNow
             </h1>
             <p style={{
               color: "rgba(255,255,255,0.55)",
@@ -213,6 +214,7 @@ export default function Home() {
           </div>
 
           {/* Location button */}
+          <span style={{color:"white",fontSize:"0.75rem"}}>Turn on location in settings to detect with "USE MY LOCATION" automatically.</span>
           <button onClick={getLocationWeather}
             className="loc-btn w-full py-2.5 rounded-xl flex items-center justify-center gap-2 text-xs uppercase tracking-widest"
           >

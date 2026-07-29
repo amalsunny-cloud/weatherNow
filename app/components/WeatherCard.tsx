@@ -64,7 +64,7 @@ export default function WeatherCard({ weather }: { weather: Weather }) {
         letterSpacing: "-0.03em",
         textShadow: "0 4px 24px rgba(0,0,0,0.2)"
       }}>
-        {weather.current.temp_c}°
+        {weather.current.temp_c}{" "}°C
       </p>
 
       {/* Condition text */}
