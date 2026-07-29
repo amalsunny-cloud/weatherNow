@@ -1,3 +1,5 @@
+weatherNow is a next.js application that provide the realtime weather statistics based on the search or automatically detected using the location. It also provide the future forecasts.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
