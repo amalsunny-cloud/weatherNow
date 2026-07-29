@@ -20,8 +20,6 @@ export default function HourlyForecast({ hours }: { hours: Hour[] }) {
       width: "100%",
       marginBottom: "2rem",
       fontFamily: "'DM Sans', sans-serif",
-
-
     }}>
       <p style={{
         color: "rgba(255,255,255,0.4)",

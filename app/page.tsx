@@ -184,7 +184,7 @@ export default function Home() {
               lineHeight: 1.1,
               textShadow: "0 2px 20px rgba(0,0,0,0.3)"
             }}>
-              WeatherNow
+              weatherNow
             </h1>
             <p style={{
               color: "rgba(255,255,255,0.55)",
